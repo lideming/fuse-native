@@ -194,6 +194,9 @@ class Fuse extends Nanoresource {
     if (this.opts.modules) options.push('modules=' + this.opts.modules)
     if (this.opts.directIO) options.push('direct_io')
     if (this.opts.bigWrites) options.push('big_writes')
+    if (this.opts.largeRead) options.push('large_read')
+    if (this.opts.useIno) options.push('use_ino')
+    if (this.opts.noatime) options.push('noatime')
 
     if (this.opts.displayFolder && IS_OSX) { // only works on osx
       options.push('volname=' + path.basename(this.opts.name || this.mnt))
